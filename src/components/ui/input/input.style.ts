@@ -14,5 +14,6 @@ export const labelStyle: SxProps<Theme> = {
   fontWeight: "500",
   lineHeight: "20px",
   textAlign: "left",
+  mb: "6px",
 };
 //styleName: Text sm/Medium;
