@@ -1,17 +1,29 @@
-import { StrictMode } from "react";
+import { StrictMode, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
-import LoginPage from "./pages/login/LoginPage.tsx";
+
+import { routes } from "./routes/routes.tsx";
+import SuspenseApp from "./components/suspense/SuspenseApp.tsx";
+
+
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
+      <Suspense fallback={<SuspenseApp />}>
+        <Routes>
+          <Route>
+            {routes.map((route, index) => (
+              <Route
+                key={index}
+                path={route.path}
+                element={route.element}
+              />
+            ))}
+          </Route>
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   </StrictMode>
 );
