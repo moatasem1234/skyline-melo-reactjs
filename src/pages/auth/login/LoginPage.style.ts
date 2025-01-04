@@ -1,8 +1,8 @@
 import { SxProps, Theme } from "@mui/system";
 
 export const loginPageContainer: SxProps<Theme> = {
-  backgroundImage: "linear-gradient(34.75deg, #F5F2F4 11.19%, #E8F2FA 110.59%)",
-  minHeight: "100vh",
+  // backgroundImage: "linear-gradient(34.75deg, #F5F2F4 11.19%, #E8F2FA 110.59%)",
+  minHeight: "91vh",
   flexDirection: "column",
   justifyItems: "center",
   justifyContent: "center",
@@ -37,5 +37,32 @@ export const pText: SxProps<Theme> = {
   textAlign: "center",
 };
 
-//styleName: Display sm/Semibold;
-//styleName: Text md/Regular;
+export const submitBtn: SxProps<Theme> = {
+  marginTop: "10px",
+  backgroundColor: "#42A5F5",
+  borderRadius: "0.5rem",
+  textTransform: "capitalize", // Prevents MUI's default uppercase transformation
+};
+
+export const googleBtn: SxProps<Theme> = {
+  marginTop: "10px",
+  alignItems: "center",
+  textTransform: "capitalize",
+  display: "flex",
+  gap: "8px",
+  borderRadius: "0.5rem",
+  backgroundColor: "white",
+};
+
+export const haveAccont: SxProps<Theme> = {
+  display: "flex",
+  textAlign: "center",
+  justifyContent: "center",
+  gap: "8px",
+};
+
+export const formContainerBody: SxProps<Theme> = {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+};
